@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP RIGHT CONTROLS -->
+<div class="top-controls">
+  <select onchange="switchMode()" id="mode">
+    <option value="standard">Standard</option>
+    <option value="hex">Hex</option>
+  </select>
+<button onclick="toggleDark()" id="themeBtn">🌙</button>
+</div>
+
+<!-- CALCULATOR -->
+<div class="calculator">
+  <input type="text" id="display" disabled>
+  <div id="buttons" class="buttons"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

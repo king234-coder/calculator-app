@@ -1,0 +1,156 @@
+/* RESET */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+/* LIGHT MODE */
+body.light {
+  background: #e2e8f0;
+}
+
+/*  DARK MODE  */
+body.dark {
+  background: #020617;
+}
+
+/*  TOP CONTROLS  */
+.top-controls {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.top-controls select,
+.top-controls button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #cbd5e1;
+}
+
+/* BUTTON */
+.top-controls button {
+  background: #4f46e5;
+  color: white;
+  border: 1px solid #4338ca;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.top-controls button:hover {
+  background: #4338ca;
+}
+
+/*  CALCULATOR  */
+.calculator {
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* LIGHT BODY */
+body.light .calculator {
+  background: #ffffff;
+  border: 1px solid #94a3b8;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* DARK BODY */
+body.dark .calculator {
+  background: #1e293b;
+  box-shadow: 
+    0 0 10px rgba(59, 130, 246, 0.4),
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 40px rgba(59, 130, 246, 0.2);
+}
+
+/*  DISPLAY  */
+#display {
+  width: 90%; 
+  height: 50px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  text-align: right;
+  border-radius: 6px;
+  padding: 8px;
+  border: none;
+}
+
+/* LIGHT DISPLAY */
+body.light #display {
+  background: #cbd5e1;
+  color: #0f172a;
+}
+
+/* DARK DISPLAY */
+body.dark #display {
+  background: #0f172a;
+  color: #e2e8f0;
+  box-shadow: inset 0 0 8px rgba(59, 130, 246, 0.3);
+}
+
+/* BUTTON GRID */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* BUTTON  */
+.buttons button {
+  height: 50px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* LIGHT BUTTONS */
+body.light .buttons button {
+  background: #cbd5e1;
+  color: #0f172a;
+  border: 1px solid #94a3b8;
+}
+
+body.light .buttons button:hover {
+  background: #94a3b8;
+}
+
+/* DARK BUTTONS */
+body.dark .buttons button {
+  background: #334155;
+  color: white;
+  border: 1px solid #475569;
+}
+
+body.dark .buttons button:hover {
+  background: #3b82f6;
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+/* SPECIAL BUTTONS */
+.buttons button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.buttons button:nth-last-child(2) {
+  background: #22c55e;
+  color: white;
+}
+
+/*  RESPONSIVE  */
+@media (max-width: 500px) {
+  .calculator {
+    width: 90%;
+  }
+}
