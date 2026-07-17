@@ -20,7 +20,6 @@ A simple and responsive calculator built using HTML, CSS, and JavaScript.
 - script.js
 
 ## 🌍 Live Demo
-https://yourusername.github.io/calculator/
-
+https://github.com/king234-coder/calculator-app.git
 ## 👨‍💻 Author
 Muhammad Salman Tahir
