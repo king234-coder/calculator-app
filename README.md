@@ -20,6 +20,6 @@ A simple and responsive calculator built using HTML, CSS, and JavaScript.
 - script.js
 
 ## 🌍 Live Demo
-https://github.com/king234-coder/calculator-app.git
+(https://numberlab.netlify.app/)
 ## 👨‍💻 Author
 Muhammad Salman Tahir
