@@ -1,6 +1,5 @@
 let display = document.getElementById("display");
 let buttonsDiv = document.getElementById("buttons");
-let themeBtn = document.getElementById("themeBtn");
 
 // create buttons
 function createButtons(mode) {
@@ -14,6 +13,8 @@ function createButtons(mode) {
     btns = ["7","8","9","/","4","5","6","*","1","2","3","-","0","+","=","C"];
   }
 
+  buttonsDiv.className = "buttons";
+
   btns.forEach(b => {
     let btn = document.createElement("button");
     btn.innerText = b;
@@ -22,7 +23,7 @@ function createButtons(mode) {
   });
 }
 
-// press
+// button click
 function press(val) {
   if (val === "=") {
     calculate();
@@ -49,20 +50,18 @@ function switchMode() {
   createButtons(mode);
 }
 
-// 🌙☀️ TOGGLE
+// 🌙☀️ DARK MODE WITH ICON CHANGE
 function toggleDark() {
+  document.body.classList.toggle("dark");
+
+  let btn = document.getElementById("themeBtn");
+
   if (document.body.classList.contains("dark")) {
-    document.body.classList.remove("dark");
-    document.body.classList.add("light");
-    themeBtn.innerText = "🌙"; 
+    btn.innerText = "☀️"; // dark mode → sun
   } else {
-    document.body.classList.remove("light");
-    document.body.classList.add("dark");
-    themeBtn.innerText = "☀️"; 
+    btn.innerText = "🌙"; // light mode → moon
   }
 }
 
-// default
+// default load
 createButtons("standard");
-document.body.classList.add("light");
-themeBtn.innerText = "🌙";
